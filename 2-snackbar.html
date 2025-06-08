@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2: Генератор промісів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 350px;
+        }
+        .form label {
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            color: #555;
+        }
+        .form input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 5px;
+            outline: none;
+        }
+        fieldset {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 0;
+        }
+        legend {
+            font-weight: bold;
+            color: #555;
+            padding: 0 10px;
+        }
+        fieldset label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        fieldset label:last-child {
+            margin-bottom: 0;
+        }
+        fieldset input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .form button {
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form button:hover {
+            background-color: #218838;
+        }
+    </style>
+  <script type="module" crossorigin src="/WEB_async/assets/snackbar-CqrU5TJ2.js"></script>
+  <link rel="modulepreload" crossorigin href="/WEB_async/assets/iziToast.min-DoCFGQgB.js">
+  <link rel="stylesheet" crossorigin href="/WEB_async/assets/iziToast-D_nxXpU-.css">
+</head>
+<body>
+    <form class="form">
+        <label>
+            Delay (ms)
+            <input type="number" name="delay" required />
+        </label>
+        <fieldset>
+            <legend>State</legend>
+            <label>
+                <input type="radio" name="state" value="fulfilled" required />
+                Fulfilled
+            </label>
+            <label>
+                <input type="radio" name="state" value="rejected" required />
+                Rejected
+            </label>
+        </fieldset>
+        <button type="submit">Create notification</button>
+    </form>
+
+</body>
+</html>
