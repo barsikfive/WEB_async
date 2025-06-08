@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1: Таймер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .controls {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        #datetime-picker {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.1em;
+            outline: none;
+        }
+        [data-start] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        [data-start]:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        [data-start]:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .timer {
+            display: flex;
+            gap: 20px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .value {
+            font-size: 3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .label {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <input type="text" id="datetime-picker" />
+        <button type="button" data-start disabled>Start</button>
+    </div>
+
+    <div class="timer">
+        <div class="field">
+            <span class="value" data-days>00</span>
+            <span class="label">Days</span>
+        </div>
+        <div class="field">
+            <span class="value" data-hours>00</span>
+            <span class="label">Hours</span>
+        </div>
+        <div class="field">
+            <span class="value" data-minutes>00</span>
+            <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+            <span class="value" data-seconds>00</span>
+            <span class="label">Seconds</span>
+        </div>
+    </div>
+
+    <script type="module" src="./1-timer.js"></script>
+</body>
+</html>
